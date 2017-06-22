@@ -38,7 +38,7 @@ renderer(viewMatrix, projectionMatrix, [0,0,100,200])</code></pre>
       // Generate Data in form
       // [x,y,z, r,g,b]
 
-      const triangle = (x,y,z,s=1) => {
+      const tetrahedron = (x,y,z,s=1) => {
         const h = (Math.sqrt(1.25)/2) * s
         const w = (1/2) * s
 
@@ -67,7 +67,7 @@ renderer(viewMatrix, projectionMatrix, [0,0,100,200])</code></pre>
       for (var x = -7; x < 7; x++) {
         for (var z = -7; z < 7; z++) {
           vertices = vertices.concat(
-            triangle(x,-.75,z,0.2)
+            tetrahedron(x,-.75,z,0.2)
           )
         }
       }
