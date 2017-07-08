@@ -293,6 +293,10 @@
               const render = () => {
                 if(!display.isPresenting) return false
 
+                // this could/should be in a different callback, but just getting it working just now
+                analyser.getByteFrequencyData(dataArray)
+                renderer.setData(dataArray)
+
                 display.requestAnimationFrame(render)
 
                 display.getFrameData(fd)
